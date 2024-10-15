@@ -203,3 +203,13 @@ class TaylorSeriesExpansion(Scene):
 
         # Clear the scene for the next function, fade out all graphs and Taylor formula
         self.play(FadeOut(ax), FadeOut(labels), FadeOut(graph1), FadeOut(VGroup(*tex)), FadeOut(graphs[-1]))
+
+# This block will automatically render the scene when the script is run
+if __name__ == "__main__":
+    config.pixel_height = 1080  # Set height for 1080p
+    config.pixel_width = 1920   # Set width for 1080p
+    config.frame_rate = 60      # Set 60 FPS
+    config.quality = "high_quality"
+    
+    scene = TaylorSeriesExpansion()
+    scene.render()
