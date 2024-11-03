@@ -1,3 +1,6 @@
+from manim import *
+import numpy as np
+
 class SelectionSort(Scene):
     def create_pointer(self, position, label_text):
         """Creates a pointer with a label below the given position."""
