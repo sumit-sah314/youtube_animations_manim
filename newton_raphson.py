@@ -69,7 +69,7 @@ class Newton(Scene):
         self.wait()
         self.play(ReplacementTransform(tex3, tex4))
         self.wait()
-        self.play(ShowCreationThenFadeOut(SurroundingRectangle(tex4)))
+        self.play(Create(SurroundingRectangle(tex4)))
         self.wait()
         self.play(Create(VGroup(dot3, line1, dot4, tangent1)))
 
@@ -105,13 +105,13 @@ class Sqrt(Scene):
        self.play(Write(tex2[1]))
        self.wait()
        self.play(FadeOut(tex2))
-       self.play(ShowCreationThenFadeOut(SurroundingRectangle(tex1)))
+       self.play(Create(SurroundingRectangle(tex1)))
        self.wait()
        self.play(FadeOut(VGroup(tex,tex1)))
 
 
 #Video Thumbnail
-class YThumbnail1(Scene):
+class YThumbnail(Scene):
     def construct(self):
         # Titles
         title3 = Text("How do Computers Compute", gradient=[TEAL, GREEN]).move_to(3.2 * UP).scale(1.5)
